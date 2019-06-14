@@ -276,7 +276,7 @@ function answerIt (selected) {
         ++correctAnswers
 
         $("#explanation")
-            .html("<h2>Yup")
+            .html("<h3>Yup</h3>")
             .html($("#explanation").html() + "<p>" + questions[qIndex[qCount - 1]].explain + "</p>")
         $(".click[answer=correct]").css("background", "#88ff88")
         $(".key[answer=correct]").css("background", "#88ff88")
