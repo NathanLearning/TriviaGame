@@ -190,7 +190,7 @@ function displayQuestion() {
     if (qCount<0) {
         clearInterval(questionInterval)
     } else {
-        $("#quiz h2").text("Question #" + (qCount + 1))
+        $("#quiz h3").text("Question #" + (qCount + 1))
         $(".counter").text(counter + " seconds")
 
         $("#question").text(questions[qIndex[qCount]].text)
@@ -205,8 +205,8 @@ function displayQuestion() {
 
         qCount++
 
-        for (var i=0; i<4; i++)
-        {   var randomIndex = Math.floor(Math.random() * tempArray.length)
+        for (var i=0; i<4; i++) {
+            var randomIndex = Math.floor(Math.random() * tempArray.length)
 
             $(".click[option=" + i + "]").text(tempArray[randomIndex])
 
