@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>zzzTrivia</title>
+        <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+    </head>
+
+    <body>
+        <div class="main">
+            <h1>Sleepy Trivia</h1>
+
+            <div id="intro">
+                <input type="button" id="start-quiz" value="START QUIZ">
+            </div>
+
+            <section id="quiz">
+                <h3>Question Number 1</h3>
+
+                <div class="inner-main">
+                    <p id="question"></p>
+
+                    <div id="options">
+                        <div class="option-row" row=1>
+                            <div class="key" option=0>0</div>
+                            <div class="click" option=0></div>
+                        </div>
+                        <div class="option-row" row=2>
+                            <div class="key" option=1>2</div>
+                            <div class="click" option=1></div>
+                        </div>
+                        <div class="option-row" row=3>
+                            <div class="key" option=2>3</div>
+                            <div class="click" option=2></div>
+                        </div>
+                        <div class="option-row" row=4>
+                            <div class="key" option=3>4</div>
+                            <div class="click" option=3></div>
+                        </div>
+                    </div>
+                        
+                    <div id="explanation"></div>
+                </div>
+
+                <div class="counter"></div>
+            </section>
+
+            <section id="game-over">
+                <h2>Game Over</h2>
+                <div id="game-stats"></div>
+                <div class="inner-game-over">
+                    <input type="button" id="try-again" value="TRY AGAIN">
+                </div>
+            </section>
+
+            <div class="push"></div>
+        </div>
+
+        <div class="get-ready-counter"></div>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+</html>
