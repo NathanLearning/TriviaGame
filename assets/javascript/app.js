@@ -8,87 +8,51 @@ const questions =
             ],
             answer: 1,
         },
-        {   text: "placeholder?",
+        {   text: "What is the fear of dreaming called?",
             options:
             [   "placeholder",
-                "placeholder",
-                "placeholder",
+                "Noctophopia",
+                "Oneirophobia",
                 "placeholder"
             ],
             answer: 2,
         },
-        {   text: "placeholder?",
+        {   text: "The New Jersey law that makes it ILLEGAL to drive after being awake for 24 hours is?",
             options:
-            [   "placeholder",
+            [   "Maggie's Law",
                 "placeholder",
                 "placeholder",
                 "placeholder"
             ],
             answer: 0,
         },
-        {   text: "placeholder",
+        {   text: "According to NASA how long is the perfect nap?",
             options:
             [   "placeholder",
-                "placeholder",
+                "26 Minutes",
                 "placeholder",
                 "placeholder"
             ],
             answer: 1,
         },
-        {   text: "placeholder?",
+        {   text: "How many different sleep stages are there?",
             options:
             [   "placeholder",
-                "placeholder",
+                "5",
                 "placeholder",
                 "placeholder"
             ],
             answer: 1,
         },
-        {   text: "placeholder?",
+        {   text: "Whats the name of the stage that has almost as much brain activity as when awake?",
             options:
             [   "placeholder",
-                "placeholder",
+                "REM",
                 "placeholder",
                 "placeholder"
             ],
             answer: 1,
         },
-        {   text: "placeholder?",
-            options:
-            [   "placeholder",
-                "placeholder",
-                "placeholder",
-                "placeholder"
-            ],
-            answer: 1,
-        },
-        {   text: "placeholder?",
-            options:
-            [   "placeholder",
-                "placeholder",
-                "placeholder",
-                "placeholder"
-            ],
-            answer: 3,
-        },
-        {   text: "placeholder?",
-            options:
-            [   "placeholder",
-                "placeholder",
-                "placeholder",
-                "placeholder"
-            ],
-            answer: 3,
-        },
-        {   text: "Placeholder",
-            options:
-            [   "placeholder",
-                "placeholder",
-                "placeholder",
-                "placeholder"
-            ],
-            answer: 1,
-        }
     ]
 
 var qCount = 0
@@ -152,11 +116,9 @@ function gameOver() {
     displayGameElements("#game-over")
 }
 
-function timer()
-{
-    
+function timer() { 
     if (counter > 0) {
-       if (counter < 4)
+       if (counter < 15)
         $(".counter")
             .text(counter + " seconds")
             .css("display", "block")
@@ -213,17 +175,17 @@ function displayQuestion() {
             if (tempArray[randomIndex] === saveText) {
                     $(".click[option=" + i + "]")
                     .attr("answer", "correct")
-                    .css("background", "#ffff88")
+                    .css("background", "#pppppp")
                 $(".key[option=" + i + "]")
                     .attr("answer", "correct")
-                    .css("background", "#ffff88")
+                    .css("background", "#pppppp")
             } else
             {   $(".click[option=" + i + "]")
                     .attr("answer", "wrong")
-                    .css("background", "#ffff88");   
+                    .css("background", "#pppppp");   
                 $(".key[option=" + i + "]")
                     .attr("answer", "wrong")
-                    .css("background", "#ffff88")
+                    .css("background", "#pppppp")
             }
 
             tempArray.splice(randomIndex, 1)
@@ -277,7 +239,6 @@ function answerIt (selected) {
 
         $("#explanation")
             .html("<h3>Yup</h3>")
-            .html($("#explanation").html() + "<p>" + questions[qIndex[qCount - 1]].explain + "</p>")
         $(".click[answer=correct]").css("background", "#88ff88")
         $(".key[answer=correct]").css("background", "#88ff88")
 
@@ -287,7 +248,6 @@ function answerIt (selected) {
         $("#explanation")
             .html("<h3>Nope</h3>")
             .html($("#explanation").html() + "<p>The correct answer is " + $(".click[answer=correct]").text() + "</p>")
-            .html($("#explanation").html() + "<p>" + questions[qIndex[qCount - 1]].explain + "</p>")
         $(".click[option=" + selected + "]").css("background", "#ff8888")
         $(".click[answer=correct]").css("background", "#88ff88")
         $(".key[option=" + selected + "]").css("background", "#ff8888")

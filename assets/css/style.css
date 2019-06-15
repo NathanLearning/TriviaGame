@@ -1,0 +1,14 @@
+body {
+    background: url("../images/interlaced.png");
+}
+
+.main {
+    text-align: center;
+    border: 1px, solid, #bd6c6c;
+}
+
+#options {
+    font-size: 20px;
+    width: 70%;
+    align-self: center;
+}
